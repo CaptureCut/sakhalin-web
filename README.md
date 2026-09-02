@@ -34,3 +34,12 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+Invoke-RestMethod "https://api.github.com/search/repositories?q=nextjs+template+tailwind&sort=stars&order=desc"
+$resp.items | Select-Object name, html_url, stargazers_count | Select-Object -First 3
+
+name                         html_url                                               stargazers_count
+----                         --------                                               ----------------
+tailwind-nextjs-starter-blog https://github.com/timlrx/tailwind-nextjs-starter-blog            10549
+next-mdx-blog                https://github.com/leerob/next-mdx-blog                            7573
+SaaS-Boilerplate             https://github.com/ixartz/SaaS-Boilerplate                         7392
