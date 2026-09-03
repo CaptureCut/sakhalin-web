@@ -1,3 +1,9 @@
+export const metadata = {
+  title: "Разработка сайтов на Сахалине — под ключ",
+  description:
+    "Минималистичные сайты для Сахалина. Чистый северный дизайн, аккуратная структура, высокая скорость. Коммерческие сайты под ключ.",
+};
+
 export default function Home() {
   return (
     <div className="min-h-screen bg-fogWhite text-deepGraphite flex flex-col">
@@ -14,19 +20,16 @@ export default function Home() {
         </nav>
       </header>
 
+      {/* Hero */}
       <main className="relative flex flex-col items-center justify-center flex-1 px-6 py-40">
-
-        {/* Фон-картинка — более заметная */}
         <img
           src="/images/projects/hero_forest_sakhalin.png"
           alt="Северный лес"
           className="absolute inset-0 w-full h-full object-cover opacity-85"
         />
 
-        {/* Мяглый туман — намного слабее */}
         <div className="absolute inset-0 bg-gradient-to-b from-fogWhite/30 to-white/60" />
 
-        {/* Контент */}
         <div className="relative max-w-3xl w-full flex flex-col gap-10 text-center">
           <h1 className="text-4xl font-semibold tracking-tight">
             Минималистичные сайты для Сахалина
@@ -45,7 +48,6 @@ export default function Home() {
         </div>
       </main>
 
-
       {/* Services */}
       <section id="services" className="px-6 py-24 bg-white border-t border-mistGray/40">
         <div className="max-w-4xl mx-auto flex flex-col gap-12">
@@ -54,25 +56,33 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
             {[
               {
-                title: "Разработка сайтов",
-                text: "Простые, быстрые и надёжные сайты под ключ. Минимализм, скорость, чистый дизайн."
+                title: "Сайт под ключ",
+                text: "Минималистичный сайт для малого бизнеса. Чистый дизайн, аккуратная структура.",
+                price: "от 15 000 ₽",
               },
               {
                 title: "Редизайн и обновление",
-                text: "Обновление старых сайтов, улучшение структуры, скорости и визуала."
+                text: "Обновление старых сайтов, улучшение структуры, скорости и визуала.",
+                price: "от 8 000 ₽",
               },
               {
                 title: "Настройка домена и хостинга",
-                text: "Подключение домена, SSL, почты, деплой на любой хостинг."
+                text: "Подключение домена, SSL, почты, деплой на любой хостинг.",
+                price: "от 2 000 ₽",
               },
               {
                 title: "Техническая поддержка",
-                text: "Обновления, исправления, сопровождение и развитие проекта."
-              }
+                text: "Обновления, исправления, сопровождение и развитие проекта.",
+                price: "от 1 000 ₽/мес",
+              },
             ].map((item, i) => (
-              <div key={i} className="p-8 border border-mistGray/40 rounded-xl bg-fogWhite shadow-sm hover:shadow-md transition-shadow">
+              <div
+                key={i}
+                className="p-8 border border-mistGray/40 rounded-xl bg-fogWhite shadow-sm hover:shadow-md transition-shadow"
+              >
                 <h3 className="text-xl font-medium mb-3">{item.title}</h3>
-                <p className="text-softGraphite leading-relaxed">{item.text}</p>
+                <p className="text-softGraphite leading-relaxed mb-4">{item.text}</p>
+                <div className="text-2xl font-semibold text-deepGraphite">{item.price}</div>
               </div>
             ))}
           </div>
@@ -93,25 +103,28 @@ export default function Home() {
               {
                 title: "Сайт для локального бизнеса",
                 text: "Минималистичный лендинг с акцентом на чистоту и скорость.",
-                img: "/images/projects/landing-en.jpg"
+                img: "/images/projects/landing-en.jpg",
               },
               {
                 title: "Мини‑портфолио",
                 text: "Чистое портфолио для фотографа или мастера.",
-                img: "/images/projects/portfolio_sakhalin_fog.jpg"
+                img: "/images/projects/portfolio_sakhalin_fog.jpg",
               },
               {
                 title: "Сайт‑визитка",
                 text: "Одностраничный сайт для специалиста или небольшого сервиса.",
-                img: "/images/projects/personal_sakhalin.jpg"
+                img: "/images/projects/personal_sakhalin.jpg",
               },
               {
                 title: "Редизайн старого сайта",
                 text: "Полное обновление структуры, визуала и скорости.",
-                img: "/images/projects/redesign_sakhalin_city.jpg"
-              }
+                img: "/images/projects/redesign_sakhalin_city.jpg",
+              },
             ].map((item, i) => (
-              <div key={i} className="p-6 border border-mistGray/40 rounded-xl bg-fogWhite shadow-sm hover:shadow-md transition-shadow">
+              <div
+                key={i}
+                className="p-6 border border-mistGray/40 rounded-xl bg-fogWhite shadow-sm hover:shadow-md transition-shadow"
+              >
                 <img
                   src={item.img}
                   alt={item.title}
@@ -119,7 +132,9 @@ export default function Home() {
                 />
                 <h3 className="text-xl font-medium mb-2">{item.title}</h3>
                 <p className="text-softGraphite leading-relaxed mb-4">{item.text}</p>
-                <a href="#" className="text-sakhalinTeal font-medium hover:underline">Смотреть пример</a>
+                <a href="#" className="text-sakhalinTeal font-medium hover:underline">
+                  Смотреть пример
+                </a>
               </div>
             ))}
           </div>
@@ -140,7 +155,7 @@ export default function Home() {
               { title: "Минимализм", text: "Чистые сайты без перегруза. Спокойные цвета, аккуратная структура." },
               { title: "Скорость", text: "Лёгкие страницы, быстрые загрузки, оптимизация под мобильные устройства." },
               { title: "Автономность", text: "Спокойная работа без лишних коммуникаций. Чёткие этапы и сроки." },
-              { title: "Надёжность", text: "Сайты легко обновляются, не ломаются и не требуют сложного обслуживания." }
+              { title: "Надёжность", text: "Сайты легко обновляются, не ломаются и не требуют сложного обслуживания." },
             ].map((item, i) => (
               <div key={i} className="p-6 border border-mistGray/40 rounded-xl bg-white shadow-sm">
                 <h3 className="text-xl font-medium mb-3">{item.title}</h3>
@@ -165,7 +180,7 @@ export default function Home() {
               { title: "Сайт под ключ", text: "21–30 дней. Чистый дизайн, аккуратная структура." },
               { title: "Редизайн", text: "10–20 дней. Обновление визуала, улучшение скорости и структуры." },
               { title: "Ответ на почту", text: "В течение 3–7 дней. Почта проверяется примерно раз в неделю." },
-              { title: "Поддержка", text: "Небольшие правки, обновления, сопровождение." }
+              { title: "Поддержка", text: "Небольшие правки, обновления, сопровождение." },
             ].map((item, i) => (
               <div key={i} className="p-6 border border-mistGray/40 rounded-xl bg-fogWhite shadow-sm">
                 <h3 className="text-xl font-medium mb-3">{item.title}</h3>
@@ -174,7 +189,6 @@ export default function Home() {
             ))}
           </div>
 
-          {/* Payment */}
           <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="p-6 border border-mistGray/40 rounded-xl bg-white shadow-sm text-left">
               <h4 className="text-lg font-medium mb-2">Оплата</h4>
@@ -250,7 +264,10 @@ export default function Home() {
 
           <p className="text-lg text-softGraphite leading-relaxed">Для связи используйте почту:</p>
 
-          <a href="mailto:sunsetpacificpack@gmail.com" className="text-sakhalinTeal text-xl font-medium hover:underline">
+          <a
+            href="mailto:sunsetpacificpack@gmail.com"
+            className="text-sakhalinTeal text-xl font-medium hover:underline"
+          >
             sunsetpacificpack@gmail.com
           </a>
 
