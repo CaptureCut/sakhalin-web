@@ -13,8 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Sakhalin Web Development",
-  description: "Minimalistic northern engineering design",
+  title: "Sakhalin Web Development — минималистичные сайты",
+  description: "Минималистичные сайты для Сахалина. Чистый северный дизайн, аккуратная структура, высокая скорость.",
+  keywords: ["Сахалин", "веб разработка", "минимализм", "сайт под ключ", "северный дизайн"],
 };
 
 export default function RootLayout({
@@ -24,9 +25,13 @@ export default function RootLayout({
 }) {
   return (
     <html
-      lang="en"
+      lang="ru"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </head>
+
       <body className="min-h-full flex flex-col bg-fogWhite text-deepGraphite">
         {children}
       </body>

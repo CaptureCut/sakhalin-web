@@ -14,13 +14,23 @@ export default function Home() {
         </nav>
       </header>
 
-      {/* Hero */}
-      <main className="relative flex flex-col items-center justify-center flex-1 px-6 py-40 bg-gradient-to-b from-fogWhite to-white">
-        <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-sakhalinTeal/10 to-transparent pointer-events-none" />
-        <div className="absolute inset-0 bg-gradient-to-b from-sakhalinTeal/5 via-transparent to-transparent blur-3xl opacity-40 pointer-events-none" />
+      <main className="relative flex flex-col items-center justify-center flex-1 px-6 py-40">
 
-        <div className="max-w-3xl w-full flex flex-col gap-10 text-center relative">
-          <h1 className="text-5xl font-semibold tracking-tight">Минималистичные сайты для Сахалина</h1>
+        {/* Фон-картинка — более заметная */}
+        <img
+          src="/images/projects/hero_forest_sakhalin.png"
+          alt="Северный лес"
+          className="absolute inset-0 w-full h-full object-cover opacity-85"
+        />
+
+        {/* Мяглый туман — намного слабее */}
+        <div className="absolute inset-0 bg-gradient-to-b from-fogWhite/30 to-white/60" />
+
+        {/* Контент */}
+        <div className="relative max-w-3xl w-full flex flex-col gap-10 text-center">
+          <h1 className="text-4xl font-semibold tracking-tight">
+            Минималистичные сайты для Сахалина
+          </h1>
 
           <p className="text-lg text-softGraphite leading-relaxed max-w-xl mx-auto">
             Чистый северный дизайн. Аккуратная структура. Высокая скорость.
@@ -34,6 +44,7 @@ export default function Home() {
           </a>
         </div>
       </main>
+
 
       {/* Services */}
       <section id="services" className="px-6 py-24 bg-white border-t border-mistGray/40">
