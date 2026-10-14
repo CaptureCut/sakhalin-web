@@ -212,7 +212,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Request */}
+{/*
       <section id="request" className="px-6 py-24 bg-white border-t border-mistGray/40">
         <div className="max-w-3xl mx-auto flex flex-col gap-10">
           <h2 className="text-3xl font-semibold tracking-tight text-center">Оставить заявку</h2>
@@ -256,6 +256,7 @@ export default function Home() {
           </form>
         </div>
       </section>
+      */}
 
       {/* Contacts */}
       <section id="contacts" className="px-6 py-24 bg-fogWhite border-t border-mistGray/40">
